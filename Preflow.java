@@ -35,10 +35,12 @@ public class Preflow{
         final int NUM_NODES = 1000;
         final int SOURCE_NODE_ID = 0;
         final int SINK_NODE_ID = 999;
-
+        
+        long curr = System.currentTimeMillis();
         int maximumFlow = preflowPush(edgeList, NUM_NODES, SOURCE_NODE_ID, SINK_NODE_ID);
+        long after = System.currentTimeMillis();
 
-        System.out.println("Maximum flow is equal to: " + maximumFlow);
+        System.out.println("Maximum flow is equal to: " + maximumFlow + " Algorithm took " + (after-curr) + " ms");
 
     }   
 
